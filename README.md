@@ -1,20 +1,30 @@
-# claude-skills
+# neck-dog
 
-สกิลของ Claude Code ที่ใช้เอง
+สกิลของ Claude Code สำหรับจัดโครงและเขียนเอกสารของ repo จากโค้ดจริง ได้แก่ `docs/architecture`, คู่มือ backend/frontend, ci-cd, ops และ reference รวมถึงอัปเดตเอกสารชุดนั้นหลัง merge ฟีเจอร์
 
-| สกิล | ทำอะไร |
-|---|---|
-| [neck-dog](neck-dog/SKILL.md) | จัดโครงและเขียนเอกสารของ repo จากโค้ดจริง (architecture, คู่มือ backend/frontend, ci-cd) และอัปเดตหลัง merge |
+ขั้นตอนอยู่ใน [SKILL.md](SKILL.md) แม่แบบและกฎการเขียนอยู่ใน [references/](references/) สคริปต์ย้ายไฟล์และตรวจลิงก์อยู่ใน [scripts/](scripts/)
 
 ## ติดตั้ง
 
 ใช้กับทุกโปรเจกต์บนเครื่อง:
 
 ```
-git clone <url ของ repo นี้> ~/claude-skills
-ln -s ~/claude-skills/neck-dog ~/.claude/skills/neck-dog
+git clone https://github.com/Neckkup/neck-dog.git ~/.claude/skills/neck-dog
 ```
 
-หรือใช้เฉพาะโปรเจกต์เดียว: คัดลอกโฟลเดอร์ `neck-dog/` ไปไว้ที่ `<project>/.claude/skills/neck-dog/`
+ใช้เฉพาะโปรเจกต์เดียว:
 
-เรียกใช้ใน Claude Code ด้วย `/neck-dog` หรือขอแบบปกติ เช่น "ทำเอกสาร architecture ของ repo นี้ให้หน่อย"
+```
+git clone https://github.com/Neckkup/neck-dog.git <project>/.claude/skills/neck-dog
+```
+
+## ใช้งาน
+
+ใน Claude Code พิมพ์ `/neck-dog` หรือขอแบบปกติ เช่น "ทำเอกสาร architecture ของ repo นี้ให้หน่อย" หรือ "อัปเดต docs หลัง merge ฟีเจอร์ล่าสุด"
+
+สคริปต์ใช้แยกได้:
+
+```
+python3 -I scripts/relink.py <repo> old/path.md=new/path.md   # ย้ายไฟล์ + แก้ลิงก์ relative
+python3 -I scripts/checklinks.py <repo>                       # ตรวจลิงก์เสียทั้ง repo
+```
