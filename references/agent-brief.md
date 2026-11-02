@@ -13,8 +13,9 @@ Write <N> file(s):
 Writing rules (must follow):
 - Language: <language of existing docs>. Read <one existing doc in the repo> first to match tone and density
   (short sentences, tables where useful, technical terms stay English).
-- Current state only, verified by reading code. Tag claims [โค้ด] (read from source) or [อนุมาน] (inferred,
-  unverified). Never invent.
+- Current state only, verified by reading code. Tag claims [โค้ด] (read from source).
+  Never guess. If something is unclear (code contradicts spec, intent unknown, value only known in production),
+  do NOT write a guess: leave it out and add it to "Questions for the user" in your report.
 - Cite sources as markdown links relative to docs/architecture/ (e.g. [server.go](../../backend/internal/httpserver/server.go)).
   Folders with parentheses must be percent-encoded in links: (app) → %28app%29.
 - No exhaustive lists that drift (every endpoint/permission/event/column). Explain the pattern, give 2–5
@@ -25,9 +26,12 @@ Writing rules (must follow):
   Target <80–200> lines.
 - Do not edit any other file. Do not commit.
 
-Report at the end: files written, line counts, and a list of inconsistencies you found between code and
-specs/existing docs (one line each).
+Report at the end: files written, line counts, a list of inconsistencies you found between code and
+specs/existing docs (one line each), and "Questions for the user": each open question with 2–4 possible
+answers and which one the code suggests.
 ```
+
+เมื่อได้รายงาน agent หลักนำ "Questions for the user" ไปถามด้วย AskUserQuestion (ไม่เกิน 4 ข้อต่อครั้ง) แล้วแก้หน้าตามคำตอบ
 
 ## การจับคู่หัวข้อ
 
