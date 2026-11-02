@@ -20,7 +20,7 @@
 - bullet ใช้รูป `- **หัวข้อ:** คำอธิบาย` และย่อยด้วยการเยื้อง ไม่เขียนเป็นย่อหน้ายาว
 - ตารางใช้เมื่อเทียบหลายสิ่งในหลายมิติ ไม่ใช้ตารางกับข้อมูลคอลัมน์เดียว
 - diagram ทุกรูปเขียนเป็น code block ` ```mermaid ` ในไฟล์ .md (GitHub/GitLab render ให้) ห้ามใช้ ASCII art, ไฟล์รูป หรือเครื่องมือวาดอื่น ยกเว้นแผนผังโฟลเดอร์ที่ใช้ tree ใน code block ธรรมดาได้
-- mermaid ใช้เมื่อช่วยให้เข้าใจจริง หน้าละไม่เกิน 1–2 รูป รูปเล็ก ๆ: `graph` สำหรับ container/การพึ่งพา, `sequenceDiagram` สำหรับเส้นทาง request หรือ event, `erDiagram` 5–8 ตารางต่อโมดูล โดยใส่แค่ PK, FK และคอลัมน์สำคัญ 1–3 ตัว
+- mermaid ใช้เมื่อช่วยให้เข้าใจจริง หน้าละไม่เกิน 1–2 รูป (ยกเว้น `architecture/README.md` ที่มี container 1 รูป + data flow 3–4 รูป) รูปเล็ก ๆ: `graph` สำหรับ container/การพึ่งพา, `sequenceDiagram` สำหรับเส้นทาง request หรือ event, `erDiagram` 5–8 ตารางต่อโมดูล โดยใส่แค่ PK, FK และคอลัมน์สำคัญ 1–3 ตัว
 
 ## ลิงก์
 
@@ -34,7 +34,7 @@
 | หน้า | บรรทัด |
 |---|---|
 | `docs/README.md` | 20–40 |
-| `architecture/README.md` | 40–70 |
+| `architecture/README.md` | 120–220 |
 | หน้า 01–0N | 80–260 |
 | คู่มือ backend/frontend | 40–90 |
 | `ci-cd.md` | 50–120 |

@@ -33,7 +33,7 @@ subagent ถามผู้ใช้ไม่ได้ ดังนั้นใ�
 docs/
 ├── README.md               ← สารบัญ + วิธีดูแลเอกสาร
 ├── architecture/
-│   ├── README.md           ← ภาพรวมระบบ (container diagram + หลักใหญ่ + ตารางหน้า 01–0N)
+│   ├── README.md           ← ภาพรวมระบบ + Tech Stack + Data Flow + ตารางหน้า 01–0N
 │   ├── 01-modules.md       ← โมดูล/แพ็กเกจหลัก ขอบเขต การพึ่งพา
 │   ├── 02-api.md           ← เส้นทาง request, middleware, handler, error, pagination
 │   ├── 03-auth.md          ← login, session, role, permission
