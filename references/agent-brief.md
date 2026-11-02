@@ -21,7 +21,7 @@ Writing rules (must follow):
 - No exhaustive lists that drift (every endpoint/permission/event/column). Explain the pattern, give 2–5
   examples, link the source file.
 - Don't repeat deploy/env content; link <ops or ci-cd doc> instead.
-- At most 1–2 small mermaid diagrams.
+- At most 1–2 small diagrams, always as ```mermaid fenced code blocks. No ASCII art or image files.
 - Start with `# <title>`, then `[← architecture](README.md)`, then a 1–2 sentence intro.
   Target <80–200> lines.
 - Do not edit any other file. Do not commit.
