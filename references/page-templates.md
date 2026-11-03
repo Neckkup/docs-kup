@@ -2,6 +2,88 @@
 
 หัวข้อในแต่ละแม่แบบเป็นจุดเริ่ม ตัดหัวข้อที่ระบบไม่มีออก ห้ามเขียน "ไม่มี" หรือ "n/a" ทิ้งไว้
 
+## README.md (root ของ repo)
+
+หน้าแรกที่คนเปิด repo เห็น ใช้โครงนี้ตามลำดับ และไม่มีลิงก์ย้อนกลับ
+
+````markdown
+# <ชื่อโปรเจกต์>
+
+<ระบบทำอะไร ใครใช้ ขอบเขตตอนนี้ 1–2 ประโยค>
+
+## Tech Stack
+
+| ส่วน | เทคโนโลยี |
+|------|-----------|
+| Frontend | <framework + major version>, <library หลัก 2–4 ตัว> |
+| Backend | <ภาษา/framework + major version>, <DB access, migration, คิว> |
+| Database / Storage | ... |
+| Infrastructure | <compose/orchestrator, reverse proxy, ที่ deploy> |
+| CI/CD | ... |
+| Testing | ... |
+
+## Overview
+
+เริ่มรันบนเครื่องใหม่:
+
+```bash
+<คำสั่งเรียงตามลำดับที่รันได้จริง>
+```
+
+| Service | URL |
+|---------|-----|
+| ... | http://localhost:... |
+
+<บัญชี login ของเครื่องพัฒนา (ถ้ามี) + bullet ข้อควรรู้ 3–7 ข้อ: อัปเดต/ปิด stack, hot reload, พอร์ตที่ต้องว่าง, สเปกเครื่อง, ข้อจำกัดของ platform>
+
+### คำสั่งพัฒนาแยกส่วน
+
+**Backend** (`/backend`):
+```bash
+<คำสั่ง>   # <ทำอะไร>
+```
+
+**Frontend** (`/frontend`):
+```bash
+<คำสั่ง>   # <ทำอะไร>
+```
+
+**Database**:
+```bash
+<migrate / generate / seed>   # <ทำอะไร>
+```
+
+### โครงสร้างโปรเจค
+
+```
+├── backend/                  # <อะไร> (port ...)
+│   ├── <โฟลเดอร์>/           # <หน้าที่>
+│   ...
+├── frontend/                 # <อะไร> (port ...)
+│   ...
+├── docs/                     # เอกสารของโปรเจค
+├── docker-compose*.yml       # <ใช้ที่ไหน>
+└── <CI config>               # <ทำอะไร>
+```
+
+## เอกสารประกอบ
+
+| เอกสาร | คำอธิบาย |
+|--------|---------|
+| [Architecture](docs/architecture/README.md) | ภาพรวมระบบ (เริ่มอ่านที่นี่) + หน้า 01–0N |
+| [Backend Docs](docs/backend/README.md) | คู่มือพัฒนา backend |
+| [Frontend Docs](docs/frontend/README.md) | คู่มือพัฒนา frontend |
+| [CI/CD Pipeline](docs/ci-cd.md) | pipeline และการ deploy |
+| ... | ops, direction, constitution, reference ตามที่มีจริง |
+
+ดูเอกสารทั้งหมดได้ที่ [`docs/`](docs/README.md)
+````
+
+- Tech Stack ในหน้านี้ใส่แค่ major version ต่อแถวเดียว รายละเอียด minor และ "กำหนดที่" อยู่ใน `architecture/README.md`
+- คำสั่งและ URL อ่านจาก Makefile, package.json, compose จริง ตัดส่วนที่ repo ไม่มี (เช่น ไม่มี frontend → ไม่มีบล็อก Frontend)
+- โครงสร้างโปรเจคลงลึก 2–3 ชั้น เฉพาะโฟลเดอร์ที่คนต้องรู้ ไม่ลิสต์ทุกไฟล์
+- เอกสารที่ยังไม่เสร็จต่อท้ายคำอธิบายว่า *(อยู่ระหว่างจัดทำ)*
+
 ## docs/README.md
 
 ```markdown

@@ -30,6 +30,7 @@ subagent ถามผู้ใช้ไม่ได้ ดังนั้นใ�
 ## โครงเป้าหมาย
 
 ```
+README.md                   ← หน้าแรกของ repo: คำอธิบาย + Tech Stack + Overview (รัน, คำสั่ง, โครงสร้าง) + เอกสารประกอบ
 docs/
 ├── README.md               ← สารบัญ + วิธีดูแลเอกสาร
 ├── architecture/
@@ -83,7 +84,7 @@ python3 -I <skill>/scripts/relink.py <repo> old/path.md=new/path.md [...]
 
 ### 4. เขียนหน้า
 
-- หน้าภาพรวม (`architecture/README.md`), `docs/README.md` และคู่มือ backend/frontend เขียนเอง
+- `README.md` ที่ root, หน้าภาพรวม (`architecture/README.md`), `docs/README.md` และคู่มือ backend/frontend เขียนเอง
 - หน้า 01–0N ที่ต้องอ่านโค้ดมาก แบ่งให้ agent เขียนพร้อมกัน 3–4 ตัว (จับคู่หัวข้อที่ใช้ไฟล์ต้นทางชุดเดียวกัน เช่น api+auth, modules+events) และให้ทุกตัวได้ brief จาก [references/agent-brief.md](references/agent-brief.md)
 - แม่แบบของแต่ละหน้าอยู่ใน [references/page-templates.md](references/page-templates.md)
 - กฎการเขียนทุกหน้าอยู่ใน [references/writing-rules.md](references/writing-rules.md)
@@ -110,4 +111,4 @@ commit เฉพาะเมื่อผู้ใช้สั่ง ถ้าอ
 1. หา commit ล่าสุดที่แก้ `docs/architecture` (`git log -1 --format=%H -- docs/architecture`) แล้วดู `git diff --stat <commit>..HEAD`
 2. จับคู่ไฟล์ที่เปลี่ยนกับหน้า (ใช้คอลัมน์ "ตัวจริงอยู่ที่" ในตารางของ `architecture/README.md`)
 3. สรุปให้ผู้ใช้ดูว่าโค้ดเปลี่ยนอะไร หน้าไหนจะแก้ตรงไหน แล้วรอคำสั่งเหมือนขั้น 2
-4. แก้เฉพาะหน้าที่ได้รับผลกระทบ แล้วตรวจตามขั้น 5
+4. แก้เฉพาะหน้าที่ได้รับผลกระทบ และ `README.md` ที่ root ถ้าเวอร์ชันใน Tech Stack, คำสั่ง, พอร์ต, โครงสร้างโฟลเดอร์ หรือรายการเอกสารเปลี่ยน แล้วตรวจตามขั้น 5
