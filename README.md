@@ -1,4 +1,4 @@
-# neck-dog
+# docs-kup
 
 สกิลของ Claude Code สำหรับจัดโครงและเขียนเอกสารของ repo จากโค้ดจริง ได้แก่ `docs/architecture`, คู่มือ backend/frontend, ci-cd, ops และ reference รวมถึงอัปเดตเอกสารชุดนั้นหลัง merge ฟีเจอร์
 
@@ -9,18 +9,18 @@
 ใช้กับทุกโปรเจกต์บนเครื่อง:
 
 ```
-git clone https://github.com/Neckkup/neck-dog.git ~/.claude/skills/neck-dog
+git clone https://github.com/Neckkup/docs-kup.git ~/.claude/skills/docs-kup
 ```
 
 ใช้เฉพาะโปรเจกต์เดียว:
 
 ```
-git clone https://github.com/Neckkup/neck-dog.git <project>/.claude/skills/neck-dog
+git clone https://github.com/Neckkup/docs-kup.git <project>/.claude/skills/docs-kup
 ```
 
 ## ใช้งาน
 
-ใน Claude Code พิมพ์ `/neck-dog` หรือขอแบบปกติ เช่น "ทำเอกสาร architecture ของ repo นี้ให้หน่อย" หรือ "อัปเดต docs หลัง merge ฟีเจอร์ล่าสุด"
+ใน Claude Code พิมพ์ `/docs-kup` หรือขอแบบปกติ เช่น "ทำเอกสาร architecture ของ repo นี้ให้หน่อย" หรือ "อัปเดต docs หลัง merge ฟีเจอร์ล่าสุด"
 
 สคริปต์ใช้แยกได้:
 
