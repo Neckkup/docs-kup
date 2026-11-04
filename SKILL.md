@@ -43,7 +43,7 @@ docs/
 │   └── 06-frontend.md      ← route, การเรียก api, state, i18n, offline
 ├── backend/README.md       ← คู่มือพัฒนา: เริ่มรัน, คำสั่ง, งานที่ทำบ่อย
 ├── frontend/README.md      ← คู่มือพัฒนา (+ DESIGN.md ถ้ามี)
-├── ci-cd.md                ← pipeline, stack ที่ deploy, CI variables, rollback
+├── ci-cd.md                ← pipeline, stack ที่ deploy, CI variables, แก้ pipeline, rollback
 ├── ops/                    ← deploy/ดูแลระบบ, บัญชีเครื่องพัฒนา (ถ้ามีเนื้อหา)
 └── reference/              ← ความรู้ภายนอกที่ใช้อ้างอิง ไม่ใช่ของระบบนี้
 ```

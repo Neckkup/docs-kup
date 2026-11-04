@@ -193,7 +193,13 @@
 
 - stack หรือ service ที่ deploy (ตาราง: อะไร, deploy โดยอะไร, ต้องมีอะไรให้ก่อน)
 - เส้นทางของ domain/path
-- pipeline: job ทีละตัว, เงื่อนไข trigger, อัตโนมัติหรือกดเอง
-- CI/CD variables (ตาราง ชื่อ, ชนิด, ใช้ทำอะไร) ห้ามใส่ค่าจริง
+- pipeline:
+  - mermaid `flowchart` จาก push → แยกตามไฟล์ที่เปลี่ยน → job build → deploy (รวมกรณีที่ข้าม build)
+  - ตาราง `| job | stage | รันเมื่อไฟล์นี้เปลี่ยน |` จาก `rules` จริง
+  - job ทีละตัว: อัตโนมัติหรือกดเอง (ดู `when: manual` ใน CI ไม่ใช่เดาจากเอกสารเก่า), image ที่ได้ tag อะไร, deploy ดึง tag อะไร
+- ขั้นตอน deploy: mermaid `sequenceDiagram` ระหว่าง job, เครื่องปลายทาง และ registry ตามลำดับคำสั่งจริง (pull, migrate, healthcheck, prune)
+- CI/CD variables (ตาราง ชื่อ, ชนิด, ใช้ทำอะไร) ห้ามใส่ค่าจริง บอกด้วยว่าค่าไหนเขียนตายตัวใน compose และค่าไหนอ่านจากตัวแปร
 - สิ่งที่ต้องเตรียมครั้งเดียว
+- แก้ pipeline: ขั้นที่มีลำดับสำหรับ เพิ่มตัวแปร (compose + CI variable + ตาราง + .env.example), เพิ่ม service, เพิ่ม stage test (ตัวอย่าง yaml ใช้คำสั่งจริงจาก Makefile/package.json), debug
 - redeploy และ rollback
+- checklist ก่อน merge เข้า branch ที่ deploy

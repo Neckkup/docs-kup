@@ -38,4 +38,4 @@
 | `architecture/README.md` | 120–220 |
 | หน้า 01–0N | 80–260 |
 | คู่มือ backend/frontend | 40–90 |
-| `ci-cd.md` | 50–120 |
+| `ci-cd.md` | 120–200 |
